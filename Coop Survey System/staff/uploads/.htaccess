@@ -1,0 +1,6 @@
+# Prevent any uploaded file in this directory (or subdirectories) from being
+# executed as a script, even if someone manages to upload a disguised .php file.
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phar|pl|py|cgi|asp|aspx|sh)$">
+    Require all denied
+</FilesMatch>
+Options -ExecCGI
